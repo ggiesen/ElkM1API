@@ -25,7 +25,9 @@ public interface MessageTypes {
 	public final static String a5_CMD_ARM_NIGHT_INSTANT = "a5";
 	public final static String a6_CMD_ARM_VACATION = "a6";
 	public final static String a7_CMD_ARM_STEP_NEXT_AWAY = "a7";
-	public final static String a8_CMD_ARM_STEP_NEXT_STAY = "a8";	
+	public final static String a8_CMD_ARM_STEP_NEXT_STAY = "a8";
+	public final static String a9_CMD_ARM_FORCE_AWAY = "a9";
+	public final static String acolon_CMD_ARM_FORCE_STAY = "a:";
 	public final static String AP_SEND_ASCII_STRING = "AP";
 	public final static String ar_ALARM_REPORTING_ACKNOWLEDGE = "ar";
 	public final static String AR_REPLY_ALARM_REPORT = "AR";    //Alarm Reporting to Ethernet;

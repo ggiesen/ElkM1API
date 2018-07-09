@@ -173,7 +173,7 @@ public class ElkM1Controller implements MessageTypes, HandshakeCompletedListener
 	}
 	
 	/**
-	 * Diconnect from panel
+	 * Disconnect from panel
 	 * 
 	 */
 	public void disconnect() {
@@ -375,6 +375,34 @@ public class ElkM1Controller implements MessageTypes, HandshakeCompletedListener
 			area = "1";
 		}
 		String fullCommand = a8_CMD_ARM_STEP_NEXT_STAY + area
+				+ String.format("%06d", Integer.parseInt(code));
+		sendCommand(fullCommand);
+	}
+	
+	/**
+	 * Section 4.2 Arm and Disarm Messages (a9)
+	 * 
+	 * @param area
+	 */
+	public void armForceAwayMode(String area) {
+		if (area == null) {
+			area = "1";
+		}
+		String fullCommand = a9_CMD_ARM_FORCE_AWAY + area
+				+ String.format("%06d", Integer.parseInt(code));
+		sendCommand(fullCommand);
+	}
+	
+	/**
+	 * Section 4.2 Arm and Disarm Messages (a:)
+	 * 
+	 * @param area
+	 */
+	public void armForceStayMode(String area) {
+		if (area == null) {
+			area = "1";
+		}
+		String fullCommand = acolon_CMD_ARM_FORCE_STAY + area
 				+ String.format("%06d", Integer.parseInt(code));
 		sendCommand(fullCommand);
 	}
